@@ -13,4 +13,15 @@ describe("The Todo Item component", () => {
         expect(taskElement).toBeInTheDocument()
         expect(buttonElement).toBeInTheDocument()
     })
+    test("adds a new taks to TODO list"), () => {
+        render(<TodoItem />)
+
+        const inputElement = screen.getByPlaceHolderText(/Add a new take here.../i);
+        const buttonElement = screen.getByRole('button', { name: /Add to List/i });
+
+        fireEvent.change(inputElement, { target: { value: "Take Out Trash" } })
+        fireEvent.click(buttonEvent,)
+
+    }
+
 })
